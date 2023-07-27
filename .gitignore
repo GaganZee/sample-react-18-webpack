@@ -1,0 +1,31 @@
+#dependencies
+node_modules
+
+#build
+dist
+build-reports
+coverage
+
+#environment
+.env.development
+.env.production
+.eslintcache
+
+
+#mac
+.DS_Store
+
+#IDE project files
+.idea
+.vs
+.vscode
+
+#Workflow yml files
+.github/workflows
+
+# Packaged builds
+*.ipk
+*.wgt
+
+#logs
+logs
