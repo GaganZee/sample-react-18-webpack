@@ -1,18 +1,30 @@
 {
   "sourceType": "unambiguous",
   "presets": [
-      [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3.31.1",
+        "debug": true
+      }
+    ],
+    ["@babel/preset-react", { "runtime": "automatic" }],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [["@babel/transform-runtime"]],
+  "env": {
+    "test": {
+      "presets": [
+        [
           "@babel/preset-env",
           {
-              "useBuiltIns": "usage",
-              "corejs": "3.31.1",
-              "debug": true
+            "targets": {
+              "node": "current"
+            }
           }
-      ],
-      ["@babel/preset-react", { "runtime": "automatic" }],
-      "@babel/preset-typescript"
-  ],
-  "plugins": [
-      ["@babel/transform-runtime"]
-  ]
+        ]
+      ]
+    }
+  }
 }

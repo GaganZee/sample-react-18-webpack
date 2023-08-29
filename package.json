@@ -5,9 +5,11 @@
   "browserslist": "Chrome >= 30",
   "main": "index.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --mode development --hot",
-    "build": "rm -rf dist && webpack --mode development"
+    "build": "rm -rf dist && webpack --mode development",
+    "format": "prettier --write \"./src/**/*.{js,jsx}\"",
+    "test": "jest --config ./jest.config.js",
+    "test:watch": "npm run test -- --watchAll"
   },
   "author": "",
   "license": "ISC",
@@ -17,9 +19,23 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
     "redux": "^4.2.1",
+    "redux-thunk": "^2.4.1",
+    "redux-persist": "^6.0.0",
+    "redux-devtools-extension": "^2.13.9",
     "typescript": "^5.1.6"
   },
   "devDependencies": {
+    "redux-thunk": "^2.4.1",
+    "redux-mock-store": "^1.5.4",
+    "@babel/eslint-parser": "^7.16.3",
+    "@jest/globals": "^27.5.1",
+    "@newrelic/publish-sourcemap": "^5.1.0",
+    "@testing-library/dom": "^8.11.3",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^13.5.0",
+    "jest": "^27.4.7",
+    "jest-styled-components": "^7.0.8",
     "@babel/core": "^7.22.9",
     "@babel/plugin-transform-runtime": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
